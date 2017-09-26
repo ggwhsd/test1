@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<!--含有gugw的都是我自己写的-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+<!--gugw-->
+  <button bindtap="changeName_gugw" disabled='{{buttonEnable_gugw}}'> {{name_service}} </button>
+  <!--<button bindtap="redir">跳转</button>-->
+  </view>
+  <view class="usermotto">
+    <!--<text class="user-motto">{{motto}}</text>
+    -->
+  </view>
+<text class="user-motto">{{name_gugw}}</text>
+  
+</view>
+
+
+    
+  
+  
+
+
+
+
+ 
